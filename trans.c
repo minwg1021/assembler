@@ -47,13 +47,6 @@ int instr_trans(char *op, char *args, char* mcode)
 	}
 	else
 		strcpy(mcode,"error");
-
-	return 0;
-}
-
-		
-		
-
 		
 	return 1;	
 }
