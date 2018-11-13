@@ -19,7 +19,7 @@ int instr_trans(char *op, char *args, char* mcode)
 	src = strtok(arr, ",");
 	des = strtok(NULL, "\n");
 
-	if(src[i] =='%' && des[i] =='&')
+	if(src[i] =='%' && des[i] =='%')
 		strcpy(mcode, "89");
 	else if(src[i] =='(' && des[i] =='%')
 		strcpy(mcode, "8b");
