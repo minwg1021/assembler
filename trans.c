@@ -3,18 +3,21 @@
 int instr_trans(char *op, char *args, char* mcode)
 {
 	int i=0;
+	char arr[100];
+
 	char *src;
 	char *des;
+	
 	 
 	// check syntax 
 	if(!is_valid(op, args)){
 		printf("Error: %s %s is not valid\n", op, args);
 		return 0;
 	}
-	strcpy(mcode, "AB CD EF");
+	strcpy(arr,args);	
 	
-	src = strtok(args, ",");
-	des = strtok(NULL, ",");
+	src = strtok(arr, ",");
+	des = strtok(NULL, "\n");
 
 	if(src[i] =='%' && des[i] =='&')
 		strcpy(mcode, "89");
@@ -44,6 +47,8 @@ int instr_trans(char *op, char *args, char* mcode)
                         strcpy(mcode, "be");
 		else if(des[i+1] =='e' && des[i+2] =='d' && des[i+3] =='i')
                         strcpy(mcode, "bf");
+		else
+			strcpy(mcode,"error");
 	}
 	else
 		strcpy(mcode,"error");
