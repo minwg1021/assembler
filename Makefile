@@ -11,4 +11,4 @@ check.o: check.c
 	gcc -c check.c
 
 clean:
-	rm -rf main.o check.o trans.o
+	rm -rf myas main.o check.o trans.o
