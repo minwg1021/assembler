@@ -16,6 +16,5 @@ int is_valid(char *op, char *args)
 
 	if(src[i] =='(' && des[i] =='(') return 0;
 	else if(des[i] =='$') return 0;
-	else if(src[i] == '$' && des[i] == '$') return 0;
 	else return 1;
 }
