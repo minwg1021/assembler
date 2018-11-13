@@ -1,5 +1,3 @@
-all: myas main trans check
-
 myas: main.o check.o trans.o
 	gcc -o myas main.o check.o trans.o
 

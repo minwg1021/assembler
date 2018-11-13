@@ -2,6 +2,7 @@
 
 int instr_trans(char *op, char *args, char* mcode)
 {
+	int i = 0;
 	// check syntax 
 	if(!is_valid(op, args)){
 		printf("Error: %s %s is not valid\n", op, args);
@@ -11,11 +12,8 @@ int instr_trans(char *op, char *args, char* mcode)
 
 	strcpy(mcode, "AB CD EF");
 
-	/********************************/
-    /*  							*/
-	/*    generate machine code     */
-    /*  							*/
-	/********************************/
 	
+
+		
 	return 1;	
 }
